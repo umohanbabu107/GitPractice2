@@ -26,4 +26,29 @@ public class NoOfChras1 {
 		}
 		System.out.println(hm);
 	}
+
+
+// Mohan 2
+
+//Char count without collections
+	public static void countChars() {
+		String text = "Malayalam";
+		String dummy = "";
+		for(int i=0; i<text.length(); i++) {
+			String sChar = Character.toString((text.charAt(i)));
+			//String sChar = ""+(text.charAt(i));
+			if(!(dummy.contains(sChar))) {
+				dummy = dummy+sChar;
+			}
+		}
+		for(int j=0; j<dummy.length(); j++) {
+			int count = 0;
+			for(int k =0; k<text.length();k++) {
+				if(dummy.charAt(j)==text.charAt(k)) {
+					count++;
+				}
+			}
+			System.out.println(dummy.charAt(j)+" count is "+count);
+		}
+	}
 }
